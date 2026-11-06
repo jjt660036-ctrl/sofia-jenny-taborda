@@ -1,96 +1,61 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sofia Jenny Taborda | Official Website</title>
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#f7f8fc;color:#17243b}
-header{background:#fff;padding:17px 6%;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;box-shadow:0 2px 12px #0000000c}
-.brand{display:flex;align-items:center;gap:12px}
-.logo{width:53px;height:53px;border-radius:50%;background:linear-gradient(135deg,#12294a,#c9a45c);display:grid;place-items:center;color:white;font-size:20px;font-weight:bold}
-.brand h1{font-size:19px}
-.verified{color:#1877e8;font-size:12px;margin-top:5px;font-weight:bold}
-nav{display:flex;gap:17px;flex-wrap:wrap}
-nav a{color:#263750;text-decoration:none;font-size:13px;font-weight:600}
-.hero{margin:28px auto;max-width:1200px;padding:65px 7%;border-radius:20px;background:linear-gradient(120deg,#102744,#244c72);color:white}
-.hero small{color:#e5c98c;letter-spacing:2px}
-.hero h2{font-size:clamp(30px,5vw,48px);margin:17px 0}
-.hero p{line-height:1.8;color:#e1e9f3;max-width:650px}
-.btn{display:inline-block;margin-top:22px;padding:13px 23px;border-radius:8px;background:#d7b66f;color:#14233b;text-decoration:none;font-weight:bold}
-main{max-width:1200px;margin:35px auto;padding:0 20px}
-.heading{text-align:center;margin:35px 0 23px}
-.heading h2{font-size:27px}
-.heading p{color:#69778a;margin-top:9px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.card{background:white;border:1px solid #e6eaf0;border-radius:15px;padding:25px 20px;text-align:center;box-shadow:0 5px 18px #14274408}
-.card .emoji{font-size:35px}
-.card h3{margin:13px 0 8px}
-.card p{font-size:13px;color:#68778b;line-height:1.6}
-.card a{display:inline-block;margin-top:16px;color:#1766ad;text-decoration:none;font-weight:bold;font-size:13px}
-.info{background:#fff;margin-top:30px;padding:30px;border-radius:15px;text-align:center;line-height:1.8}
-footer{background:#102744;color:#dce6f1;text-align:center;padding:30px 15px;margin-top:45px;font-size:13px}
-footer p{margin:8px}
-@media(max-width:600px){header{justify-content:center}.brand{width:100%;justify-content:center}nav{justify-content:center}.hero{margin:15px;padding:40px 25px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sofia Jenny Taborda | Official Website</title>
+  <style>
+    :root { --navy:#082e59; --blue:#1769aa; --gold:#c7a45b; --ink:#17283b; --pale:#f4f8fc; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Arial, Helvetica, sans-serif; color:var(--ink); background:#fff; }
+    .topbar { display:flex; align-items:center; gap:18px; padding:12px clamp(16px,4vw,54px); background:#fff; box-shadow:0 3px 18px #092b5014; position:relative; z-index:2; }
+    .logo { width:76px; height:76px; object-fit:contain; flex:0 0 auto; }
+    .brand { min-width:0; }
+    .brand h1 { margin:0; color:var(--navy); font-family:Georgia,serif; font-size:clamp(20px,3vw,30px); line-height:1.15; }
+    .verified { display:inline-flex; align-items:center; justify-content:center; width:18px; height:18px; border-radius:50%; background:#1877d2; color:white; font:bold 12px Arial; vertical-align:middle; margin-left:5px; }
+    .brand p { margin:5px 0 0; color:#64748b; font-size:13px; letter-spacing:.08em; text-transform:uppercase; }
+    nav { margin-left:auto; display:flex; flex-wrap:wrap; justify-content:flex-end; gap:8px; }
+    nav a { color:var(--navy); text-decoration:none; font-size:14px; font-weight:600; padding:10px 12px; border-radius:22px; }
+    nav a:hover { background:#edf5fc; }
+    .hero { position:relative; width:100%; background:#eaf3fc; }
+    .hero img { display:block; width:100%; height:auto; max-height:560px; object-fit:cover; object-position:center; }
+    .intro { text-align:center; padding:36px 18px 42px; background:linear-gradient(180deg,#f7faff,#fff); }
+    .intro h2 { margin:0 0 10px; color:var(--navy); font: bold clamp(24px,4vw,38px) Georgia,serif; }
+    .intro p { margin:0 auto; max-width:760px; line-height:1.7; color:#52657a; }
+    .quicklinks { display:grid; grid-template-columns:repeat(auto-fit,minmax(145px,1fr)); gap:14px; max-width:1000px; margin:26px auto 0; padding:0 18px; }
+    .tile { border:1px solid #e2eaf2; border-radius:15px; padding:18px 12px; text-align:center; color:var(--navy); background:white; font-weight:700; box-shadow:0 5px 18px #0b31500b; }
+    footer { padding:22px; text-align:center; color:#718096; font-size:13px; border-top:1px solid #edf1f5; }
+    @media (max-width:760px) { .topbar { flex-wrap:wrap; } nav { width:100%; margin:0; justify-content:flex-start; } nav a { padding:8px 10px; } .logo { width:62px;height:62px; } }
+  </style>
 </head>
 <body>
-<header>
-  <div class="brand">
-    <div class="logo">SJT</div>
-    <div>
-      <h1>Sofia Jenny Taborda</h1>
-      <div class="verified">✓ VERIFIED PROFILE</div>
+  <header class="topbar">
+    <img class="logo" src="assets/sofia-logo.png" alt="Sofia Jenny Taborda logo">
+    <div class="brand">
+      <h1>Sofia Jenny Taborda <span class="verified" aria-label="Verified">✓</span></h1>
+      <p>Official Website</p>
     </div>
-  </div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<section class="hero" id="home">
-  <small>WELCOME TO MY OFFICIAL WEBSITE</small>
-  <h2>Discover. Connect. Explore.</h2>
-  <p>Welcome to the official online space of Sofia Jenny Taborda. Explore fashion, premium media, products, international opportunities and community support.</p>
-  <a class="btn" href="#services">Explore Website →</a>
-</section>
-
-<main>
-  <div class="heading" id="services">
-    <h2>Explore Our Sections</h2>
-    <p>Choose a section to discover more.</p>
-  </div>
-
-  <div class="grid">
-    <div class="card"><div class="emoji">🎬</div><h3>Premium Videos</h3><p>Exclusive video previews and monthly membership.</p><a href="videos.html">Explore Videos →</a></div>
-    <div class="card"><div class="emoji">📸</div><h3>Premium Photos</h3><p>Discover our exclusive photo collection.</p><a href="photos.html">Explore Photos →</a></div>
-    <div class="card"><div class="emoji">👗</div><h3>Fashion Store</h3><p>Clothing, shoes, watches, bags and accessories.</p><a href="fashion.html">Explore Store →</a></div>
-    <div class="card"><div class="emoji">🌍</div><h3>Visa & Jobs</h3><p>Explore international opportunities and information.</p><a href="jobs.html">Explore Opportunities →</a></div>
-    <div class="card"><div class="emoji">🎁</div><h3>Gifts & Help</h3><p>Discover gifts and ways to support others.</p><a href="gifts.html">Explore More →</a></div>
-    <div class="card"><div class="emoji">❤️</div><h3>Donations</h3><p>Support charitable and community assistance.</p><a href="donations.html">Learn More →</a></div>
-  </div>
-
-  <section class="info" id="about">
-    <h2>About Sofia Jenny Taborda</h2>
-    <p>Welcome to my official website. Our goal is to provide a clear, accessible and easy-to-use online experience for visitors around the world.</p>
-  </section>
-
-  <section class="info" id="contact">
-    <h2>Contact & Support</h2>
-    <p>For enquiries, orders and assistance, please use our contact section.</p>
-    <a class="btn" href="mailto:">Contact Us</a>
-  </section>
-</main>
-
-<footer>
-  <strong>Sofia Jenny Taborda</strong>
-  <p>Official Website</p>
-  <p>© 2026 Sofia Jenny Taborda. All rights reserved.</p>
-</footer>
+    <nav aria-label="Main navigation">
+      <a href="#">Home</a><a href="#">Videos</a><a href="#">Photos</a>
+      <a href="#">Fashion</a><a href="#">Visa</a><a href="#">Gifts</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" aria-label="Website banner">
+      <img src="assets/sofia-header-banner.png" alt="Sofia Jenny Taborda global services banner">
+    </section>
+    <section class="intro">
+      <h2>Welcome to the Official Website</h2>
+      <p>Explore fashion, premium video and photo collections, opportunities, visa information, and featured services — all in one place.</p>
+      <div class="quicklinks">
+        <div class="tile">▶ Premium Videos</div>
+        <div class="tile">▧ Photo Gallery</div>
+        <div class="tile">✦ Fashion Store</div>
+        <div class="tile">✈ Visa Information</div>
+        <div class="tile">♡ Gifts & Services</div>
+      </div>
+    </section>
+  </main>
+  <footer>© Sofia Jenny Taborda · Official Website</footer>
 </body>
 </html>
